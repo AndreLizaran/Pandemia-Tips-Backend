@@ -5,7 +5,8 @@ const { body } = require('express-validator');
 // Controllers
 const { 
   signUp, 
-  signIn 
+  signIn, 
+  validateUserToken
 } = require('../controllers/userControllers');
 
 // Middlewares
@@ -37,6 +38,6 @@ router.post(
   signIn
 );
 
-router.get('/token');
+router.get('/validate-token', validateUserToken);
 
 module.exports = router;
