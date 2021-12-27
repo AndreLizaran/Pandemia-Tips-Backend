@@ -13,6 +13,10 @@ const PlaceSchema = new Schema ({
     type:String,
     required:true
   },
+  images: {
+    type:Array,
+    default:[]
+  },
   rate: {
     type:Number,
     required:true
@@ -24,6 +28,10 @@ const PlaceSchema = new Schema ({
   tips: {
     type:Array,
     default:[],
+  },
+  categories: {
+    type:Array,
+    default:[]
   }
 })
 

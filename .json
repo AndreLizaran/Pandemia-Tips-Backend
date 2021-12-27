@@ -1,0 +1,128 @@
+[
+  {
+    "_id": {
+      "$oid": "615d29df3b74cd46273db899"
+    },
+    "title": "Acta de nacimiento",
+    "description": "Irure reprehenderit laborum consectetur minim quis. Irure reprehenderit laborum consectetur minim quis",
+    "images": [""],
+    "categories": [
+      "Documentos", 
+      "Identificación"
+    ],
+    "tips": [
+      "Puedes hacer tu cita desde la página del INE", 
+      "Las personas mayores de 60 no necesitan hacer cita", 
+      "En caso de renovar/reponer tu INE es recomendable llevar testigos", 
+      "Es importante que tu acta esté en buenas condiciones", 
+      "Tus documentos deben ser oficiales", 
+      "Lleva sombrilla para el sol, espararás afuera hasta que sea tu turno"],
+    "addresses": {
+      "street": "Nicolás Bravo No.347, 91700",
+      "colony": "Centro",
+      "schedule": "8:00 - 15:00"
+    }  
+  },
+  {
+    "_id": {
+      "$oid": "615d29df3b74cd46273db899"
+    },
+    "title": "Tramitar acta de nacimiento",
+    "description": "Irure reprehenderit laborum consectetur minim quis. Irure reprehenderit laborum consectetur minim quis",
+    "images": [""],
+    "categories": [
+      "Documentos",
+      "Identificación"
+    ],
+    "tips": [
+      "Puedes hacer tu cita desde la página del INE", 
+      "Las personas mayores de 60 no necesitan hacer cita", 
+      "En caso de renovar/reponer tu INE es recomendable llevar testigos", 
+      "Es importante que tu acta esté en buenas condiciones", 
+      "Tus documentos deben ser oficiales", 
+      "Lleva sombrilla para el sol, espararás afuera hasta que sea tu turno"
+    ],
+    "addresses": {
+      "street": "Nicolás Bravo No.347, 91700",
+      "colony": "Centro",
+      "schedule": "8:00 - 15:00"
+    }
+  },
+  {
+    "_id": {
+        "$oid": "615d2a233b74cd46273db89a"
+    },
+    "title": "Tramitar permiso para conducir",
+    "description": "Irure reprehenderit laborum consectetur minim quis. Irure reprehenderit laborum consectetur minim quis",
+    "images": [""],
+    "categories": [
+      "Documentos",
+      "Identificación"
+    ],
+    "tips": [
+      "Puedes hacer tu cita desde la página del INE",
+      "Las personas mayores de 60 no necesitan hacer cita",
+      "En caso de renovar/reponer tu INE es recomendable llevar testigos", 
+      "Es importante que tu acta esté en buenas condiciones", 
+      "Tus documentos deben ser oficiales", 
+      "Lleva sombrilla para el sol, espararás afuera hasta que sea tu turno"
+    ],
+    "addresses": {
+      "street": "Nicolás Bravo No.347, 91700",
+      "colony": "Centro",
+      "schedule": "8:00 - 15:00"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "616a0b8a85bc27ec60bf93bf"
+    },
+    "title": "Tramitar RFC",
+    "description": "Irure reprehenderit laborum consectetur minim quis. Irure reprehenderit laborum consectetur minim quis",
+    "images": [""],
+    "categories": [
+      "Documentos", 
+      "Identificación", 
+      "Impuestos"
+    ],
+    "tips": [
+      "Puedes hacer tu cita desde la página del INE", 
+      "Las personas mayores de 60 no necesitan hacer cita", 
+      "En caso de renovar/reponer tu INE es recomendable llevar testigos", 
+      "Es importante que tu acta esté en buenas condiciones", 
+      "Tus documentos deben ser oficiales", 
+      "Lleva sombrilla para el sol, espararás afuera hasta que sea tu turno"
+    ],
+    "addresses": {
+      "street": "Nicolás Bravo No.347, 91700",
+      "colony": "Centro",
+      "schedule": "8:00 - 15:00"
+    }
+  },
+  {
+    "_id": {
+        "$oid": "616a0c1485bc27ec60bf93c0"
+    },
+    "title": "Tramitar tarjeta de débito BBVA",
+    "description": "Irure reprehenderit laborum consectetur minim quis. Irure reprehenderit laborum consectetur minim quis",
+    "images": [""],
+    "categories": [
+      "Banco", 
+      "Documentos"
+    ],
+    "tips": [
+      "Puedes hacer tu cita desde la página del INE", 
+      "Las personas mayores de 60 no necesitan hacer cita", 
+      "En caso de renovar/reponer tu INE es recomendable llevar testigos", 
+      "Es importante que tu acta esté en buenas condiciones", 
+      "Tus documentos deben ser oficiales", 
+      "Lleva sombrilla para el sol, espararás afuera hasta que sea tu turno"
+    ],
+    "addresses": {
+      "street": "Nicolás Bravo No.347, 91700",
+      "colony": "Centro",
+      "schedule": "8:00 - 15:00"
+    }
+  }
+]
+
