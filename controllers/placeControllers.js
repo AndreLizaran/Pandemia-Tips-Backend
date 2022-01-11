@@ -14,18 +14,18 @@ async function getPlacesInformation (req, res = response) {
       images:place.images,
       rate:place.rate
     }));
-    res.json({ ok:true, data:mapPlaces });
+    res.json(mapPlaces);
   } catch {
-    res.status(500).json({ ok:false, error:'E0' });
+    res.status(500).json({ error:'E0' });
   }
 }
 
 async function getPlaceInformation (req, res = response) {
   try {
     const { placeInformation } = req.body;
-    res.json({ ok:true, data:placeInformation });
+    res.json(placeInformation);
   } catch {
-    res.status(500).json({ ok:false, error:'E0' });
+    res.status(500).json({ error:'E0' });
   }
 }
 
