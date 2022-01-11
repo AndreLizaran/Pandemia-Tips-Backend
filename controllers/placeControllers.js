@@ -8,6 +8,7 @@ async function getPlacesInformation (req, res = response) {
   try {
     const places = await Place.find({});
     const mapPlaces = places.map((place) => ({
+      _id:place._id,
       title:place.title,
       description:place.description,
       images:place.images,
