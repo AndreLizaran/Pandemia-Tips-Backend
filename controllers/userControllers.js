@@ -62,7 +62,6 @@ async function validateUserToken (req, res = response) {
     if (!savedUser) return res.status({ error:'E5' });
     const newToken = tokenCreator(_id);
     res.json({ 
-      ok:true, 
       token:newToken, 
       displayName:savedUser.displayName
     });
