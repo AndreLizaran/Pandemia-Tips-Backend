@@ -12,7 +12,8 @@ async function getPlacesInformation (req, res = response) {
       title:place.title,
       description:place.description,
       images:place.images,
-      rate:place.rate
+      rate:place.rate,
+      categories: place.categories
     }));
     res.json(mapPlaces);
   } catch {
