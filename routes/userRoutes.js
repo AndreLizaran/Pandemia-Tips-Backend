@@ -12,6 +12,7 @@ const {
 // Middlewares
 const validateEmail = require('../middlewares/validateEmail');
 const validateInformation = require('../middlewares/validateInformation');
+const validateToken = require('../middlewares/validateToken');
 
 const router = Router();
 
@@ -38,6 +39,6 @@ router.post(
   signIn
 );
 
-router.get('/validate-token', validateUserToken);
+router.get('/validate-token', validateToken, validateUserToken);
 
 module.exports = router;

@@ -54,16 +54,11 @@ async function signIn (req, res = response) {
 
 async function validateUserToken (req, res = response) {
   try {
-    const { authorization } = req.headers;
-    if (!authorization) return res.status(400).json({ error:'E4' });
-    const _id = validateToken(authorization.split(' ')[1]); 
-    if (!_id) return res.status(400).json({ error:'E5' });
-    const savedUser = await User.findById(_id);
-    if (!savedUser) return res.status({ error:'E5' });
-    const newToken = tokenCreator(_id);
+    const { userInformation } = req.body;
+    const newToken = tokenCreator(userInformation._id);
     res.json({ 
       token:newToken, 
-      displayName:savedUser.displayName
+      displayName:userInformation.displayName
     });
   } catch (error) {
     res.status(500).json({ error });
