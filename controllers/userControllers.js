@@ -24,7 +24,7 @@ async function signUp (req, res = response) {
     const newUser = new User({ displayName, email, password:newPassword });
     await newUser.save();
     const token = tokenCreator(newUser._id);
-    res.status(200).json({ displayName, token });
+    res.status(200).json({ displayName, token, favorites:newUser.favorites });
   } catch {
     res.status(500).json({ error:'Error del servidor' });
   }
@@ -45,6 +45,7 @@ async function signIn (req, res = response) {
     res.status(200).json({ 
       ok:true, 
       displayName:userInformation.displayName, 
+      favorites:userInformation.favorites,
       token
     });
   } catch {
@@ -58,7 +59,8 @@ async function validateUserToken (req, res = response) {
     const newToken = tokenCreator(userInformation._id);
     res.json({ 
       token:newToken, 
-      displayName:userInformation.displayName
+      displayName:userInformation.displayName,
+      favorites:userInformation.favorites
     });
   } catch (error) {
     res.status(500).json({ error:'Error del servidor' });
