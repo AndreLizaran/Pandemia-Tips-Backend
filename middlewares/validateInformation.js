@@ -8,7 +8,7 @@ function validateInformation (req, res = response, next) {
     if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });
     next();
   } catch {
-    res.status(500).json({ ok:false, error:'E0' });
+    res.status(500).json({ ok:false, error:'Error del servidor' });
   }
 }
 

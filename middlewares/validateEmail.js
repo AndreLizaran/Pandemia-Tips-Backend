@@ -11,7 +11,7 @@ async function validateEmail (req, res = response, next) {
     req.body.userInformation = savedUser;
     next();
   } catch {
-    res.status(500).json({ ok:false, error:'E0' });
+    res.status(500).json({ ok:false, error:'Error del servidor' });
   }
 }
 

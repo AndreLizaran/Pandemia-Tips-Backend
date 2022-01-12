@@ -19,14 +19,14 @@ async function signUp (req, res = response) {
       email
     } = req.body;
     if (userInformation) 
-      return res.status(400).json({ ok:false, error:'E1' });
+      return res.status(400).json({ ok:false, error:'Usuario no existe' });
     const newPassword = hashPassword(password);
     const newUser = new User({ displayName, email, password:newPassword });
     await newUser.save();
     const token = tokenCreator(newUser._id);
     res.status(200).json({ displayName, token });
   } catch {
-    res.status(500).json({ error:'E0' });
+    res.status(500).json({ error:'Error del servidor' });
   }
 }
 
@@ -37,10 +37,10 @@ async function signIn (req, res = response) {
       password
     } = req.body;
     if (!userInformation)
-      return res.status(400).json({ error:'E2' });
+    return res.status(400).json({ ok:false, error:'Usuario no existe' });
     const result = comparePasswords(password, userInformation.password);
     if (!result)
-      return res.status(400).json({ error:'E3' });
+      return res.status(400).json({ error:'Correo o contraseña no correctas'});
     const token = tokenCreator(userInformation._id);
     res.status(200).json({ 
       ok:true, 
@@ -48,7 +48,7 @@ async function signIn (req, res = response) {
       token
     });
   } catch {
-    res.status(500).json({ error:'E0' });
+    res.status(500).json({ error:'Error del servidor' });
   }
 }
 
@@ -61,7 +61,7 @@ async function validateUserToken (req, res = response) {
       displayName:userInformation.displayName
     });
   } catch (error) {
-    res.status(500).json({ error });
+    res.status(500).json({ error:'Error del servidor' });
   }
 }
 
