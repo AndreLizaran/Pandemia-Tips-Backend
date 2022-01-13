@@ -36,9 +36,10 @@ async function getPlacesByCategories (req, res = response) {
   try {
     const { category } = req.params;
     const places = await Place.find({});
+    if (category === 'any') return res.json(places);
     const filteredPlaces = places.filter((place) => {
       if (place.categories.includes(category)) return place;
-    })
+    });
     res.json(filteredPlaces);
   } catch {
     res.status(500).json({ error:'Error del servidor' });
