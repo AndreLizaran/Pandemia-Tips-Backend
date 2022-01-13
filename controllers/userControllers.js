@@ -5,7 +5,6 @@ const comparePasswords = require('../helpers/comparePasswords');
 // Helpers
 const hashPassword = require('../helpers/hashPassword');
 const tokenCreator = require('../helpers/tokenCreator');
-const validateToken = require('../helpers/validateToken');
 
 // Models
 const User = require('../models/User');
@@ -43,7 +42,6 @@ async function signIn (req, res = response) {
       return res.status(400).json({ error:'Correo o contraseña no correctas'});
     const token = tokenCreator(userInformation._id);
     res.status(200).json({ 
-      ok:true, 
       displayName:userInformation.displayName, 
       favorites:userInformation.favorites,
       token
